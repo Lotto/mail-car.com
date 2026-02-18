@@ -1,5 +1,5 @@
 title: "Mail Car"
-description: "Le client email propulsé par l'IA et la voix. Gérez vos emails sans les mains."
+description: "Mail Car est le client email propulsé par l'IA et la voix. Lisez, résumez et répondez à vos emails sans les mains. Compatible Gmail et Outlook."
 tagline: "Gérez vos emails à la voix grâce à l'IA"
 url: "https://www.mail-car.com"
 baseurl: ""
@@ -28,6 +28,7 @@ exclude:
   - README.md
   - FULL-AUDIT-REPORT.md
   - ACTION-PLAN.md
+  - screenshots
 
 # Navigation
 nav_links:

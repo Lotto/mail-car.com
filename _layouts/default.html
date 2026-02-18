@@ -6,6 +6,7 @@
   <meta name="robots" content="index, follow">
   <meta name="theme-color" content="#0D1117">
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23F5A623' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><rect x='2' y='4' width='20' height='16' rx='2'/><path d='m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7'/></svg>">
+  <link rel="preconnect" href="https://cdn.tailwindcss.com" crossorigin>
   <link rel="preconnect" href="https://unpkg.com" crossorigin>
   <link rel="preconnect" href="https://api.iconify.design" crossorigin>
   {% seo %}
@@ -38,19 +39,54 @@
     "name": "Mail Car",
     "description": "{{ site.description }}",
     "url": "{{ site.url }}",
+    "image": "{{ site.url }}/assets/images/og-image.png",
+    "inLanguage": "fr",
     "applicationCategory": "BusinessApplication",
-    "operatingSystem": "Web",
+    "operatingSystem": "All",
+    "author": {
+      "@type": "Organization",
+      "name": "Mail Car",
+      "url": "{{ site.url }}"
+    },
     "offers": {
       "@type": "AggregateOffer",
       "lowPrice": "7",
       "highPrice": "15",
       "priceCurrency": "EUR",
-      "offerCount": "3"
-    },
-    "aggregateRating": {
-      "@type": "AggregateRating",
-      "ratingValue": "5",
-      "ratingCount": "3"
+      "offerCount": "3",
+      "url": "{{ site.url }}/#pricing",
+      "offers": [
+        {
+          "@type": "Offer",
+          "name": "Solo",
+          "description": "Pour les indépendants et freelances",
+          "price": "15",
+          "priceCurrency": "EUR",
+          "url": "https://app.mail-car.com",
+          "priceValidUntil": "2026-12-31",
+          "availability": "https://schema.org/InStock"
+        },
+        {
+          "@type": "Offer",
+          "name": "Team",
+          "description": "À partir de 3 utilisateurs",
+          "price": "9",
+          "priceCurrency": "EUR",
+          "url": "https://app.mail-car.com",
+          "priceValidUntil": "2026-12-31",
+          "availability": "https://schema.org/InStock"
+        },
+        {
+          "@type": "Offer",
+          "name": "Business",
+          "description": "À partir de 10 utilisateurs",
+          "price": "7",
+          "priceCurrency": "EUR",
+          "url": "https://app.mail-car.com",
+          "priceValidUntil": "2026-12-31",
+          "availability": "https://schema.org/InStock"
+        }
+      ]
     }
   }
   </script>
@@ -61,10 +97,12 @@
     "name": "Mail Car",
     "url": "{{ site.url }}",
     "logo": "{{ site.url }}/assets/images/og-image.png",
+    "description": "{{ site.description }}",
     "contactPoint": {
       "@type": "ContactPoint",
       "email": "contact@mail-car.com",
-      "contactType": "customer service"
+      "contactType": "customer service",
+      "availableLanguage": "French"
     }
   }
   </script>

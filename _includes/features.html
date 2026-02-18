@@ -15,7 +15,7 @@
       {% for feature in site.features %}
       <div class="reveal feature-card bg-white border border-gray-100 rounded-2xl p-6 text-center" data-delay="{{ forloop.index0 | times: 100 }}">
         <div class="inline-flex items-center justify-center w-14 h-14 bg-accent/10 text-accent rounded-xl mb-5">
-          {{ feature.icon }}
+          <i data-lucide="{{ feature.icon }}" class="w-8 h-8"></i>
         </div>
         <h3 class="text-lg font-semibold text-gray-900 mb-3">{{ feature.title }}</h3>
         <p class="text-gray-500 text-sm leading-relaxed">{{ feature.description }}</p>

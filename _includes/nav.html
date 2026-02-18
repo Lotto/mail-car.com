@@ -2,7 +2,7 @@
   <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
     <!-- Logo -->
     <a href="#" class="flex items-center gap-2">
-      <img src="{{ '/assets/images/logo.svg' | relative_url }}" alt="Mail Car" class="h-8 w-auto">
+      <i data-lucide="mail" class="w-7 h-7 text-accent"></i>
       <span class="text-white font-semibold text-lg">Mail Car</span>
     </a>
 
@@ -14,9 +14,12 @@
     </div>
 
     <!-- Desktop CTA -->
-    <a href="#pricing" class="hidden md:inline-flex bg-accent hover:bg-accent-hover text-dark font-semibold text-sm px-5 py-2.5 rounded-lg transition-colors">
-      Essai gratuit
-    </a>
+    <div class="hidden md:flex items-center gap-4">
+      <a href="https://app.mail-car.com" class="text-gray-300 hover:text-white transition-colors text-sm">Se connecter</a>
+      <a href="https://app.mail-car.com" class="bg-accent hover:bg-accent-hover text-dark font-semibold text-sm px-5 py-2.5 rounded-lg transition-colors">
+        Essai gratuit
+      </a>
+    </div>
 
     <!-- Mobile hamburger -->
     <button id="menu-btn" class="md:hidden text-white" aria-label="Ouvrir le menu">
@@ -36,7 +39,7 @@
     {% for link in site.nav_links %}
     <a href="{{ link.url }}" class="text-white text-2xl font-medium hover:text-accent transition-colors">{{ link.title }}</a>
     {% endfor %}
-    <a href="#pricing" class="bg-accent hover:bg-accent-hover text-dark font-semibold px-8 py-3 rounded-lg transition-colors text-lg mt-4">
+    <a href="https://app.mail-car.com" class="bg-accent hover:bg-accent-hover text-dark font-semibold px-8 py-3 rounded-lg transition-colors text-lg mt-4">
       Essai gratuit
     </a>
   </div>

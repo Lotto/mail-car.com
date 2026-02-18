@@ -3,14 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>{{ page.title | default: site.title }} — {{ site.description }}</title>
-  <meta name="description" content="{{ site.description }}">
-  <meta property="og:title" content="{{ site.title }}">
-  <meta property="og:description" content="{{ site.description }}">
-  <meta property="og:image" content="{{ site.url }}/assets/images/og-image.png">
-  <meta property="og:url" content="{{ site.url }}">
-  <meta property="og:type" content="website">
-  <meta name="twitter:card" content="summary_large_image">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#0D1117">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23F5A623' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><rect x='2' y='4' width='20' height='16' rx='2'/><path d='m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7'/></svg>">
+  {% seo %}
   <link rel="canonical" href="{{ site.url }}{{ page.url }}">
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
@@ -32,6 +28,31 @@
     }
   </script>
   <link rel="stylesheet" href="{{ '/assets/css/custom.css' | relative_url }}">
+
+  <!-- JSON-LD structured data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "Mail Car",
+    "description": "{{ site.description }}",
+    "url": "{{ site.url }}",
+    "applicationCategory": "BusinessApplication",
+    "operatingSystem": "Web",
+    "offers": {
+      "@type": "AggregateOffer",
+      "lowPrice": "7",
+      "highPrice": "15",
+      "priceCurrency": "EUR",
+      "offerCount": "3"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "5",
+      "ratingCount": "3"
+    }
+  }
+  </script>
 </head>
 <body class="font-sans text-gray-900 antialiased">
   {% include nav.html %}
@@ -43,5 +64,7 @@
   {% include footer.html %}
 
   <script src="{{ '/assets/js/main.js' | relative_url }}"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script>lucide.createIcons();</script>
 </body>
 </html>

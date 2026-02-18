@@ -1,0 +1,43 @@
+<nav id="main-nav" class="nav-sticky fixed top-0 left-0 right-0 z-50">
+  <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+    <!-- Logo -->
+    <a href="#" class="flex items-center gap-2">
+      <img src="{{ '/assets/images/logo.svg' | relative_url }}" alt="Mail Car" class="h-8 w-auto">
+      <span class="text-white font-semibold text-lg">Mail Car</span>
+    </a>
+
+    <!-- Desktop links -->
+    <div class="hidden md:flex items-center gap-8">
+      {% for link in site.nav_links %}
+      <a href="{{ link.url }}" class="text-gray-300 hover:text-white transition-colors text-sm">{{ link.title }}</a>
+      {% endfor %}
+    </div>
+
+    <!-- Desktop CTA -->
+    <a href="#pricing" class="hidden md:inline-flex bg-accent hover:bg-accent-hover text-dark font-semibold text-sm px-5 py-2.5 rounded-lg transition-colors">
+      Essai gratuit
+    </a>
+
+    <!-- Mobile hamburger -->
+    <button id="menu-btn" class="md:hidden text-white" aria-label="Ouvrir le menu">
+      <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"/>
+      </svg>
+    </button>
+  </div>
+
+  <!-- Mobile menu overlay -->
+  <div id="mobile-menu" class="mobile-menu hidden fixed inset-0 bg-dark/95 backdrop-blur-lg z-50 flex flex-col items-center justify-center gap-8">
+    <button id="menu-close" class="absolute top-6 right-6 text-white" aria-label="Fermer le menu">
+      <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/>
+      </svg>
+    </button>
+    {% for link in site.nav_links %}
+    <a href="{{ link.url }}" class="text-white text-2xl font-medium hover:text-accent transition-colors">{{ link.title }}</a>
+    {% endfor %}
+    <a href="#pricing" class="bg-accent hover:bg-accent-hover text-dark font-semibold px-8 py-3 rounded-lg transition-colors text-lg mt-4">
+      Essai gratuit
+    </a>
+  </div>
+</nav>

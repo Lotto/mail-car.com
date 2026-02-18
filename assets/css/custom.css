@@ -1,0 +1,100 @@
+/* Scroll reveal */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Hero floating animation */
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-12px); }
+}
+
+.animate-float {
+  animation: float 4s ease-in-out infinite;
+}
+
+/* Hero background glow */
+@keyframes glowPulse {
+  0%, 100% { opacity: 0.3; transform: scale(1); }
+  50% { opacity: 0.5; transform: scale(1.05); }
+}
+
+.glow-pulse {
+  animation: glowPulse 6s ease-in-out infinite;
+}
+
+/* Nav transition */
+.nav-sticky {
+  transition: background-color 0.3s ease, backdrop-filter 0.3s ease;
+}
+
+.nav-sticky.scrolled {
+  background-color: rgba(13, 17, 23, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+/* Smooth scroll */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Feature card hover */
+.feature-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.08);
+}
+
+/* Pricing card hover */
+.pricing-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.pricing-card:hover {
+  transform: translateY(-4px);
+}
+
+/* Mobile menu transition */
+.mobile-menu {
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.mobile-menu.hidden {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.mobile-menu.open {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Step connector line */
+@media (min-width: 768px) {
+  .step-connector {
+    position: relative;
+  }
+  .step-connector::after {
+    content: '';
+    position: absolute;
+    top: 2.5rem;
+    right: -2rem;
+    width: 4rem;
+    height: 2px;
+    background: linear-gradient(to right, #F5A623, transparent);
+  }
+  .step-connector:last-child::after {
+    display: none;
+  }
+}

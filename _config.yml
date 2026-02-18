@@ -1,17 +1,23 @@
 title: "Mail Car"
 description: "Le client email propulsé par l'IA et la voix. Gérez vos emails sans les mains."
 tagline: "Gérez vos emails à la voix grâce à l'IA"
-url: "https://mail-car.com"
+url: "https://www.mail-car.com"
 baseurl: ""
 lang: "fr"
-author: "Mail Car"
+encoding: utf-8
+image: /assets/images/og-image.png
+author:
+  name: "Mail Car"
 social:
   name: "Mail Car"
+twitter:
+  card: summary_large_image
 
 # Build settings
 markdown: kramdown
 plugins:
   - jekyll-seo-tag
+  - jekyll-sitemap
 
 # Exclude from build
 exclude:
@@ -20,6 +26,8 @@ exclude:
   - node_modules
   - vendor
   - README.md
+  - FULL-AUDIT-REPORT.md
+  - ACTION-PLAN.md
 
 # Navigation
 nav_links:
